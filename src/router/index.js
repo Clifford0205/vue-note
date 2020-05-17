@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import VmodelComputed from '@/views/VmodelComputed';
+import emit from '@/views/emit';
+import sync from '@/views/sync';
 
 Vue.use(VueRouter);
 
@@ -24,6 +26,16 @@ const routes = [
     path: '/vmodel-computed',
     name: 'VmodelComputed',
     component: VmodelComputed
+  },
+  {
+    path: '/emit',
+    name: 'emit',
+    component: emit
+  },
+  {
+    path: '/sync',
+    name: 'sync',
+    component: sync
   }
 ];
 

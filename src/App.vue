@@ -6,6 +6,10 @@
       <router-link to="/about">About</router-link>
       |
       <router-link :to="{ name: 'VmodelComputed' }">V-model</router-link>
+      |
+      <router-link :to="{ name: 'emit' }">emit</router-link>
+      |
+      <router-link :to="{ name: 'sync' }">sync</router-link>
     </div>
     <router-view />
   </div>
