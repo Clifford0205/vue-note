@@ -10,6 +10,8 @@
       <router-link :to="{ name: 'emit' }">emit</router-link>
       |
       <router-link :to="{ name: 'sync' }">sync</router-link>
+      |
+      <router-link :to="{ name: 'props' }">Props</router-link>
     </div>
     <router-view />
   </div>

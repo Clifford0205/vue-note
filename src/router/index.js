@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import VmodelComputed from '@/views/VmodelComputed';
 import emit from '@/views/emit';
 import sync from '@/views/sync';
+import Props from '@/views/Props';
 
 Vue.use(VueRouter);
 
@@ -36,6 +37,11 @@ const routes = [
     path: '/sync',
     name: 'sync',
     component: sync
+  },
+  {
+    path: '/props',
+    name: 'props',
+    component: Props
   }
 ];
 

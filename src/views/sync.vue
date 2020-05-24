@@ -45,11 +45,6 @@ export default {
     return {
       counter: 0
     };
-  },
-  methods: {
-    updateCounter(val) {
-      this.counter = val;
-    }
   }
 };
 </script>
