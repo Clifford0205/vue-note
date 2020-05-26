@@ -12,6 +12,8 @@
       <router-link :to="{ name: 'sync' }">sync</router-link>
       |
       <router-link :to="{ name: 'props' }">Props</router-link>
+      |
+      <router-link :to="{ name: 'select' }">Select</router-link>
     </div>
     <router-view />
   </div>

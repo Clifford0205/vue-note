@@ -5,6 +5,7 @@ import VmodelComputed from '@/views/VmodelComputed';
 import emit from '@/views/emit';
 import sync from '@/views/sync';
 import Props from '@/views/Props';
+import Select from '@/views/Select';
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
     path: '/props',
     name: 'props',
     component: Props
+  },
+  {
+    path: '/select',
+    name: 'select',
+    component: Select
   }
 ];
 
