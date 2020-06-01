@@ -14,6 +14,8 @@
       <router-link :to="{ name: 'props' }">Props</router-link>
       |
       <router-link :to="{ name: 'select' }">Select</router-link>
+      |
+      <router-link :to="{ name: 'Ref' }">Ref</router-link>
     </div>
     <router-view />
   </div>

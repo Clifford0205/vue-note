@@ -6,6 +6,7 @@ import emit from '@/views/emit';
 import sync from '@/views/sync';
 import Props from '@/views/Props';
 import Select from '@/views/Select';
+import Ref from '@/views/Ref';
 
 Vue.use(VueRouter);
 
@@ -48,6 +49,11 @@ const routes = [
     path: '/select',
     name: 'select',
     component: Select
+  },
+  {
+    path: '/Ref',
+    name: 'Ref',
+    component: Ref
   }
 ];
 
