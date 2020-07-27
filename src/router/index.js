@@ -6,6 +6,8 @@ import emit from '@/views/emit';
 import sync from '@/views/sync';
 import Props from '@/views/Props';
 import Slot from '@/views/Slot';
+import Select from '@/views/Select';
+import Ref from '@/views/Ref';
 
 Vue.use(VueRouter);
 
@@ -48,6 +50,16 @@ const routes = [
     path: '/slot',
     name: 'slot',
     component: Slot
+  },
+  {
+    path: '/select',
+    name: 'select',
+    component: Select
+  },
+  {
+    path: '/Ref',
+    name: 'Ref',
+    component: Ref
   }
 ];
 
