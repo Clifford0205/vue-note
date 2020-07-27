@@ -5,6 +5,7 @@ import VmodelComputed from '@/views/VmodelComputed';
 import emit from '@/views/emit';
 import sync from '@/views/sync';
 import Props from '@/views/Props';
+import Slot from '@/views/Slot';
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
     path: '/props',
     name: 'props',
     component: Props
+  },
+  {
+    path: '/slot',
+    name: 'slot',
+    component: Slot
   }
 ];
 
