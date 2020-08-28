@@ -8,6 +8,7 @@ import Props from '@/views/Props';
 import Slot from '@/views/Slot';
 import Select from '@/views/Select';
 import Ref from '@/views/Ref';
+import Chart from '@/views/Chart';
 
 Vue.use(VueRouter);
 
@@ -60,6 +61,11 @@ const routes = [
     path: '/Ref',
     name: 'Ref',
     component: Ref
+  },
+  {
+    path: '/Chart',
+    name: 'Chart',
+    component: Chart
   }
 ];
 

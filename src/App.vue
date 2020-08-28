@@ -18,6 +18,8 @@
       <router-link :to="{ name: 'select' }">Select</router-link>
       |
       <router-link :to="{ name: 'Ref' }">Ref</router-link>
+      |
+      <router-link :to="{ name: 'Chart' }">Chart</router-link>
     </div>
     <router-view />
   </div>
