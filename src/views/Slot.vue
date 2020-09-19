@@ -15,6 +15,13 @@
         <div>{{ mySlot.info.location }}</div>
       </template>
     </ChildrenComponent>
+
+    <ChildrenComponent2 :info="myInfo">
+      <template v-slot="{ info }">
+        安安你好這邊是第二個
+        <h2>電腦名稱: {{ info.name }}</h2>
+      </template>
+    </ChildrenComponent2>
   </div>
 </template>
 
@@ -22,9 +29,12 @@
 // 資料來源:https://cloud.tencent.com/developer/article/1408212
 
 import ChildrenComponent from '@/components/Slot/ChildrenComponent';
+import ChildrenComponent2 from '@/components/Slot/ChildrenComponent2';
+
 export default {
   components: {
-    ChildrenComponent
+    ChildrenComponent,
+    ChildrenComponent2
   },
   data() {
     return {
