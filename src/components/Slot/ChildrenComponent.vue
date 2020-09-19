@@ -1,37 +1,31 @@
 <template>
   <div>
-    <slot name="title"></slot>
-    <h1>I am from children component</h1>
-    <slot name="text"></slot>
+    <slot :info="info"></slot>
 
-    <h2>請填滿以下的表格</h2>
-    <form action="">
-      <div id="form-header">
-        <slot name="form-header"></slot>
-      </div>
-      <div id="form-fields">
-        <slot name="form-fields"></slot>
-      </div>
-      <div id="form-controls">
-        <slot name="form-controls"></slot>
-      </div>
-      <div id="useful-links">
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
-      </div>
-    </form>
+    <br />
+    <br />
+    <p>
+      販賣地點:
+      <slot name="other" :info="info"></slot>
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  props: {},
+  props: {
+    info: {
+      required: true
+    }
+  },
   data() {
-    return {};
+    return {
+      // info: {
+      //   name: '電腦',
+      //   price: '20,000',
+      //   material: '不鏽鋼'
+      // }
+    };
   },
   components: {},
   created() {},

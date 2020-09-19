@@ -1,27 +1,26 @@
 <template>
   <div>
-    <ChildrenComponent>
-      <h2 slot="title">{{ title }}</h2>
-      <p slot="text">I am the paragraph text</p>
+    <h1>這台是我的電腦</h1>
+    <!-- <ChildrenComponent :info="myInfo" v-slot="mySlot"> -->
+    <!-- 未指定的內容對應默認插槽 -->
+    <!-- 請注意插槽的縮寫語法不能和具名插槽混用，因為它會導致作用域不明確： -->
+    <ChildrenComponent :info="myInfo">
+      <template v-slot:default="mySlot">
+        <h2>電腦名稱: {{ mySlot.info.name }}</h2>
+        <h3>價格: {{ mySlot.info.price }}</h3>
+        <h4>材質: {{ mySlot.info.material }}</h4>
+      </template>
 
-      <div slot="form-header">
-        <h3>這是表單的標題</h3>
-        <p>表單資訊</p>
-      </div>
-
-      <div slot="form-fields">
-        <input type="text" placeholder="name" />
-        <input type="password" placeholder="password" required />
-      </div>
-
-      <div slot="form-controls">
-        <button @click="handleSubmitgit">Submit</button>
-      </div>
+      <template v-slot:other="mySlot">
+        <div>{{ mySlot.info.location }}</div>
+      </template>
     </ChildrenComponent>
   </div>
 </template>
 
 <script>
+// 資料來源:https://cloud.tencent.com/developer/article/1408212
+
 import ChildrenComponent from '@/components/Slot/ChildrenComponent';
 export default {
   components: {
@@ -29,7 +28,12 @@ export default {
   },
   data() {
     return {
-      title: 'I am a dynamic title slot title'
+      myInfo: {
+        name: '超級電腦',
+        price: '999',
+        material: '不鏽鋼',
+        location: '7-11'
+      }
     };
   },
   methods: {}
