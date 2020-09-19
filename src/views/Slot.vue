@@ -15,7 +15,7 @@
       </div>
 
       <div slot="form-controls">
-        <button :click="handleSubmitgit pull">Submit</button>
+        <button @click="handleSubmitgit">Submit</button>
       </div>
     </ChildrenComponent>
   </div>
