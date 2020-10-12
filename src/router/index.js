@@ -9,6 +9,9 @@ import Slot from '@/views/Slot';
 import Select from '@/views/Select';
 import Ref from '@/views/Ref';
 import Chart from '@/views/Chart';
+import DatePicker from '@/views/DatePicker';
+import 'vue2-datepicker/index.css';
+import 'vue2-datepicker/locale/zh-cn';
 
 Vue.use(VueRouter);
 
@@ -66,6 +69,11 @@ const routes = [
     path: '/Chart',
     name: 'Chart',
     component: Chart
+  },
+  {
+    path: '/DatePicker',
+    name: 'DatePicker',
+    component: DatePicker
   }
 ];
 

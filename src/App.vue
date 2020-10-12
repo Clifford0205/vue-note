@@ -20,6 +20,8 @@
       <router-link :to="{ name: 'Ref' }">Ref</router-link>
       |
       <router-link :to="{ name: 'Chart' }">Chart</router-link>
+      |
+      <router-link :to="{ name: 'DatePicker' }">DatePicker</router-link>
     </div>
     <router-view />
   </div>
