@@ -7,6 +7,7 @@ import ECharts from 'vue-echarts';
 import DatePicker from 'vue2-datepicker';
 import VueDatePicker from '@mathieustan/vue-datepicker';
 import '@mathieustan/vue-datepicker/dist/vue-datepicker.min.css';
+import './plugins/bootstrap-vue';
 
 Vue.config.productionTip = false;
 Vue.component('Select2', Select2);

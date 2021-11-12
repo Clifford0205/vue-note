@@ -1,0 +1,25 @@
+// ＝＝＝＝＝整個網頁變數放這裡＝＝＝＝＝
+$primary-color: #3db68b;
+$accent-color: #b7ca3e;
+$third-color: #ffbb00;
+$alert-color: #ff0000;
+
+$text-color: #000;
+$text-accent-color: #b9b9b9;
+$text-alert-color: #ff4444;
+$text-important: #db0000;
+
+$font-xl: 26px;
+$font-lg: 20px;
+$font-sm: 16px;
+$font-xs: 14px;
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 800
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}

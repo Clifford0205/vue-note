@@ -1,0 +1,57 @@
+.modal-style {
+  &.terms-modal {
+    .modal-dialog {
+      max-width: 400px;
+    }
+    .modal-body {
+      padding: 10px 20px 0 20px;
+    }
+    .modal-style-title {
+      color: $primary-color;
+      font-size: 16px;
+    }
+
+    .terms-content {
+      line-height: 30px;
+      letter-spacing: 1.5px;
+    }
+
+    .check-area {
+      margin-top: 15px;
+    }
+  }
+
+  &.redemption {
+    .modal-dialog {
+      max-width: 335px;
+      .modal-style-title {
+        font-size: $font-sm;
+      }
+      footer {
+        .custom-btn {
+          flex: unset;
+          padding: 15px;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.share-modal {
+  .share-icons {
+    display: flex;
+    justify-content: space-around;
+    .one-icon {
+      text-align: center;
+      img {
+        width: 48px;
+        height: 48px;
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/bootstrap';
+@import './helpers/_reset';
+@import './helpers/_variables';
+@import './helpers/_myset';
+@import './helpers/_mixins';
+@import './helpers/_custom_class';
+@import './helpers/_my_modal';
+
+body.mobile {
+  max-width: 415px;
+  margin: 0 auto;
+  .main-content {
+    min-height: 80vh;
+    @include lg {
+      padding-top: 80px;
+    }
+  }
+  .the-header-red-point {
+    left: unset;
+    right: unset;
+    width: 100%;
+    max-width: 415px;
+  }
+}

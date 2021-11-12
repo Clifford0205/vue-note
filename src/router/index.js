@@ -10,6 +10,7 @@ import Select from '@/views/Select';
 import Ref from '@/views/Ref';
 import Chart from '@/views/Chart';
 import DatePicker from '@/views/DatePicker';
+import CheckBox from '@/views/CheckBox';
 import 'vue2-datepicker/index.css';
 import 'vue2-datepicker/locale/zh-cn';
 
@@ -74,6 +75,11 @@ const routes = [
     path: '/DatePicker',
     name: 'DatePicker',
     component: DatePicker
+  },
+  {
+    path: '/check-box',
+    name: 'CheckBox',
+    component: CheckBox
   }
 ];
 

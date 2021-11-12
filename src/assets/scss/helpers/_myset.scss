@@ -1,0 +1,117 @@
+* {
+  a {
+    color: $text-color;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: unset;
+    }
+  }
+
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 0;
+  }
+
+  textarea {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select {
+    outline: none;
+  }
+
+  button {
+    background-color: unset;
+    border: none;
+  }
+}
+
+table,
+th,
+td {
+  border: 1px solid #dee2e6;
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: unset;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  #app {
+    position: relative;
+    font-family: 'Noto Sans CJK TC', '微軟正黑體', sans-serif;
+    color: $text-color;
+
+    .transition {
+      transition: 0.4s;
+    }
+
+    button:focus {
+      outline: 0px dotted;
+      outline: 0px auto -webkit-focus-ring-color;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: 'Noto Sans CJK TC', '微軟正黑體', sans-serif;
+      line-height: normal;
+    }
+  }
+}
+
+.collapsed {
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='password'] {
+  padding: 0;
+}
+
+input[type='text'] {
+  padding: 0;
+  line-height: 1.33333;
+}
+
+.mx-calendar-content {
+  td {
+    vertical-align: middle;
+  }
+  .cell {
+    &.active {
+      background-color: $primary-color !important;
+    }
+  }
+}

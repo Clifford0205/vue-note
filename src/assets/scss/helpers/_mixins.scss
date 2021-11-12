@@ -1,0 +1,235 @@
+// ＝＝＝＝＝所有mixin放這裡 ＝＝＝＝＝
+@mixin xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin modal-reset {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+// RWD設定結束
+
+//垂直置中
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+//動畫效果
+@mixin te {
+  transition: all 0.5s ease-in-out;
+}
+
+//collapse
+@mixin collapse {
+  .c-collapse-btn {
+    cursor: pointer;
+    &.active {
+      .fas {
+        transform: rotate(180deg);
+      }
+
+      .c-collapse-content {
+        max-height: 600px;
+      }
+
+      .member-block {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .fas {
+      @include te;
+    }
+
+    .c-collapse-content {
+      position: relative;
+      max-height: 0;
+      overflow: hidden;
+      @include te;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        padding-left: 40px;
+
+        &:first-child {
+          position: relative;
+          z-index: 200;
+          border-radius: 10px 10px 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 10px 10px;
+        }
+
+        [class^='icon-'] {
+          margin-right: 5px;
+          font-size: 18px;
+        }
+
+        &:hover {
+          [class^='icon-'] {
+            &:before {
+              color: #0056b3;
+            }
+          }
+        }
+      }
+
+      .logout {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// 此專案的mixin
+@mixin screenSize {
+  min-height: calc(100vh - 206px);
+  padding-bottom: 80px;
+  @include lg {
+    min-height: calc(100vh - 228px);
+    padding-bottom: 50px;
+  }
+}
+
+@mixin boxArea {
+  .box-area {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    padding: 50px 65px;
+
+    @include xl {
+      width: 60%;
+    }
+
+    @include lg {
+      width: 70%;
+    }
+
+    @include md {
+      width: 95%;
+      padding: 20px 20px;
+    }
+
+    .box-title {
+      font-size: $font-lg;
+      text-align: center;
+      font-weight: weight(bold);
+    }
+
+    .single-input-field {
+      .input-title {
+        font-size: $font-sm;
+        color: #7aa294;
+      }
+    }
+
+    .box-big-btn {
+      border-radius: 50px;
+      font-size: 18px;
+      padding: 10px;
+      margin-top: 25px;
+    }
+
+    .box-question {
+      text-align: center;
+      color: #888888;
+      margin-top: 30px;
+      a,
+      button {
+        color: $primary-color;
+        margin-left: 20px;
+      }
+    }
+
+    .vue-pincode-input-wrapper {
+      width: 100%;
+      justify-content: space-around;
+      // margin-top: 80px;
+    }
+
+    .vue-pincode-input {
+      border-bottom: 2px solid #888888;
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 28px;
+      font-weight: weight(bold);
+
+      &:focus {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+}
+
+@mixin captchaArea {
+  .captcha-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include lg {
+      flex-wrap: wrap;
+    }
+    .single-input-field {
+      margin-bottom: 0;
+      @include lg {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    button {
+      transform: translateY(-35%);
+      .fa-sync-alt {
+        font-size: 25px;
+        &:before {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .img-captcha {
+    .canvas {
+      width: 185px;
+      height: 40px;
+    }
+  }
+}

@@ -22,12 +22,16 @@
       <router-link :to="{ name: 'Chart' }">Chart</router-link>
       |
       <router-link :to="{ name: 'DatePicker' }">DatePicker</router-link>
+      |
+      <router-link :to="{ name: 'CheckBox' }">CheckBox</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
+@import './assets/scss/main';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
