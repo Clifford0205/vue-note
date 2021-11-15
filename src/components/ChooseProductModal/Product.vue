@@ -67,4 +67,6 @@ export default {
     }
   }
 };
+// 資料來源
+// https://stackoverflow.com/questions/46953209/vue-bind-value-of-object-to-a-checkbox-value
 </script>
