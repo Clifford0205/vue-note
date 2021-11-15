@@ -6,6 +6,7 @@
 @import './helpers/_mixins';
 @import './helpers/_custom_class';
 @import './helpers/_my_modal';
+@import './page/allPage';
 
 body.mobile {
   max-width: 415px;

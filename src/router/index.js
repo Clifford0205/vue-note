@@ -11,6 +11,7 @@ import Ref from '@/views/Ref';
 import Chart from '@/views/Chart';
 import DatePicker from '@/views/DatePicker';
 import CheckBox from '@/views/CheckBox';
+import Transition from '@/views/Transition';
 import 'vue2-datepicker/index.css';
 import 'vue2-datepicker/locale/zh-cn';
 
@@ -80,6 +81,11 @@ const routes = [
     path: '/check-box',
     name: 'CheckBox',
     component: CheckBox
+  },
+  {
+    path: '/transition',
+    name: 'Transition',
+    component: Transition
   }
 ];
 

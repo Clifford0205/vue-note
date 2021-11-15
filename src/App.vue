@@ -24,6 +24,8 @@
       <router-link :to="{ name: 'DatePicker' }">DatePicker</router-link>
       |
       <router-link :to="{ name: 'CheckBox' }">CheckBox</router-link>
+      |
+      <router-link :to="{ name: 'Transition' }">Transition</router-link>
     </div>
     <router-view />
   </div>
