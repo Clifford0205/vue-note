@@ -6,6 +6,7 @@ import Select2 from 'v-select2-component';
 import ECharts from 'vue-echarts';
 import DatePicker from 'vue2-datepicker';
 import VueDatePicker from '@mathieustan/vue-datepicker';
+import '@fortawesome/fontawesome-free/css/all.css';
 import '@mathieustan/vue-datepicker/dist/vue-datepicker.min.css';
 import './plugins/bootstrap-vue';
 

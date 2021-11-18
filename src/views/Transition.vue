@@ -18,6 +18,16 @@
       <div class="btn-area">
         <button @click="handleToggle">toggle-btn</button>
       </div>
+
+      <div class="plus-one-area">
+        <button class="heart-outer" @click="handleLike">
+          <i class="fas fa-heart"></i>
+
+          <transition-group name="slide-fade" @enter="enter">
+            <div v-for="like in likeList" :key="like" class="plus-one">+1</div>
+          </transition-group>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -29,12 +39,25 @@ export default {
   components: {},
   data() {
     return {
-      isShow: false
+      isShow: false,
+      likeList: 0
     };
   },
   methods: {
     handleToggle() {
       this.isShow = !this.isShow;
+    },
+
+    handleLike() {
+      this.likeList++;
+      setTimeout(() => {
+        this.likeList--;
+      }, 300);
+    },
+
+    enter(el, done) {
+      el.style.transition = 'all 1.8s ease';
+      done();
     }
   }
 };
@@ -64,6 +87,21 @@ export default {
 .slide-leave-active {
   position: absolute;
   // right: 0;
+}
+
+// plus one
+.slide-fade-enter-to {
+  transform: translateY(-50%);
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-200%);
 }
 
 // 資料來源
